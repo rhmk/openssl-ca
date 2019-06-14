@@ -3,8 +3,12 @@
 usage() {
 echo "USAGE: $(basename $0) keydir name"
 exit 1
-
 }
+
+cleanup() { 
+	[ -f ${extv3} ] && rm -f ${extv3} 
+}
+trap 'cleanup' 0
 
 
 CONFIG=$(dirname $0)/../etc/config.sh
@@ -21,8 +25,6 @@ pub="${1}/${2}.crt"
 csr="${1}/${2}.csr"
 extv3=$(mktemp -u -t X509v3_XXXX_ext.cnf)
 
-cleanup() { [ -f ${extv3} ] && rm -f ${extv3} }
-trap 'cleanup' 0
 
 echo "Welcome to Webserver https keypair generation"
 echo ""

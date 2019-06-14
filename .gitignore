@@ -4,5 +4,5 @@
 *.srl
 *.key
 etc/config.sh
-Certs
-Certs/*
+certs
+certs/*

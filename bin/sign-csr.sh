@@ -7,6 +7,10 @@ usage() {
 	echo "USAGE: $(basename $0) certifcate-request"
 	exit 1
 }
+cleanup() { 
+	[ -f ${extv3} ] && rm -f ${extv3} 
+}
+trap 'cleanup' 0
 
 [ $# -ne 1 ] && usage
 
@@ -15,8 +19,6 @@ echo "Signing Certificate $csr"
 csr=$1
 extv3=$(mktemp -u -t X509v3_XXXX_ext.cnf)
 
-cleanup() { [ -f ${extv3} ] && rm -f ${extv3} }
-trap 'cleanup' 0
 
 #### Read more paramters:
 #

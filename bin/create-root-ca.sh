@@ -17,5 +17,5 @@ openssl req -x509 -new -nodes -extensions v3_ca -sha512 \
 # Install Root CA on Fedora/RHEL as trusted
 echo "Installing CA as trusted"
 sudo cp ${carootcertificate} /etc/pki/ca-trust/source/anchors/
-update-ca-trust
+sudo update-ca-trust
 
