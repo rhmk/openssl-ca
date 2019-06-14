@@ -1,0 +1,8 @@
+*.pem
+*.crt
+*.csr
+*.srl
+*.key
+etc/config.sh
+Certs
+Certs/*
