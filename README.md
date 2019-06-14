@@ -22,10 +22,11 @@ Installation
 Usage
 =====
 
+```
 create-root-ca.sh               : Creates your root CA
 create-cert-pair.sh <dir> <name>: creates a private key and a signed cert with previously created CA for e.g. a webserver
 display-pem.sh <key>            : displays the content of key <key>
 sign-csr.sh <csr>               : signs a application generated csr with the above key 
 verify-cert.sh <name>           : verifies that a cert is valid against the CA
-
+```
 
