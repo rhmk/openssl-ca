@@ -1,7 +1,7 @@
 openssl-ca
 ===========
 
-Simple scriptiong to create my own ca with openssl tools. 
+Simple scripting to create my own ca with openssl tools. 
 
 Goal: Create a CA for simple use in my lab and home environments
 
